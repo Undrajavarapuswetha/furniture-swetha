@@ -1,0 +1,21 @@
+<html>
+{% load static %}
+<head>
+    <style>
+        .main{
+            background-image: url("{% static 'bg.png' %}");
+            background-size: cover;
+            background-position: center;
+        }
+        </style>
+
+    <meta charset="UTF-8">
+    <title>index page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body class="main">
+<center><h1>welcome to furniture</h1></center>
+<a href="{% url 'reg' %}"><input type="button" value="register" style="margin-top:200px;margin-left:300px;width:300px;height:50px;background-color:transparent;border:1px solid black;color:black;font-size:20px;"></a><br><br>
+<a href="{% url 'login' %}"><input type="button" value="login" style="margin-left:300px;width:300px;height:50px;background:transparent;border:1px solid black"></a>
+</body>
+</html>

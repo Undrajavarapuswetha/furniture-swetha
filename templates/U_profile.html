@@ -1,0 +1,42 @@
+<html>
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>PROFILE PAGE</title>
+   <style>
+       .main{
+            background-image: url("{% static 'image3.jpg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+   </style>
+</head>
+<body class="main">
+<center><h1>user-profile</h1></center>
+<table>
+     {% for data in profile %}
+         {% csrf_token %}
+    <tr>
+        <th>Name</th>
+        <th>email</th>
+        <th>password</th>
+        <th>mobile No</th>
+        <th>address</th>
+        <th>pincode</th>
+
+
+    </tr>
+    <tr>
+        <td>{{ data.cname }}</td>
+        <td>{{ data.cemail }}</td>
+        <td>{{ data.cpaw}}</td>
+        <td>{{ data.cmno}}</td>
+        <td>{{ data.cadd }}</td>
+        <td>{{ data.cpincode }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+<style>
+.nav-item{
+font-size:17px;
+padding-right:60px;
+}
+
+.navbar-nav{
+
+margin-left:350px;
+
+}
+#img{
+width:750px;
+height:350px;
+    margin-top: 70px;
+    margin-left: -40px;
+}
+</style>
+</head>
+<body style="background-color:#1a1e23">
+
+<nav class="navbar navbar-expand-sm" style="font-family: 'Poppins', sans-serif;">
+  <div class="container-fluid">
+    <div class="navbar-brand" style="font-size:30px;color:white">Sit&Stay</div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:white">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}" style="color:white">Contact</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'categories' %}" style="color:white">Categories</a>
+        </li>
+        <li class="nav-item dropdown" style="color:white;">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color:white">Account</a>
+          <ul class="dropdown-menu" style="background-color: #c8143f;">
+            <li><a class="dropdown-item" href="{% url 'index' %}" style="color:#1d2124">User</a></li>
+            <li><a class="dropdown-item" href="{% url 'alogin' %}" style="color:#1d2124">admin</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="row">
+<div class="col-sm-5">
+<h1 style="font-size:65px;padding-left:60px;font-family: 'Montserrat Subrayada', sans-serif;padding-top:85px;color:purple">WELCOME<br>HOME</h1>
+        <p style="padding-left:60px;font-family: 'Poppins', sans-serif;color:white;font-size:12px;">@re you Looking For Selecting a Good Furniture,<br>
+            Here Is a Better Place To Browse The Best
+            And<br> Unique Designes As Per Your Home</p>
+<h1 style="font-family: 'Mrs Saint Delafield', cursive;color:#c8143f;margin-left:50px;">undrajavarapu</h1>
+</div>
+<div class="col-sm-7">
+<img src="{% static 'home.jpg' %}" id="img">
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+
+
+<html>
+{% load static %}
+<head>
+    <title>SOFA PAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<style>
+
+    .card{
+        margin-top:20px;
+        margin-left:20px;
+        border-radius: 0px;
+
+    }
+    input{
+        margin-left:60px;
+        background-color:#c8143f;
+        color:white;
+        width:100px;
+        height:40px;
+        border:1px solid #1b1e21;
+        border-radius:10px;
+    }
+    .card{
+        height:320px;
+        width:200px;
+    }
+    i{
+        color:#c8143f;
+    }
+    .card-body{
+      background-color:#787878;
+    }
+    input{
+        border-radius: 0px;
+        border-color:white;
+    }
+    .card-title{
+        font-weight: bold;
+    }
+    p{
+        font-size:15px;
+    }
+</style>
+</head>
+<body style="background-color:#cfc7e3;font-family: 'Poppins', sans-serif;">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+          <div class="card" style="width:250px">
+    <img class="card-img-top" src="{% static 'bed1.jpg' %}" alt="Card image" style="width:100%;height:180px;">
+    <div class="card-body">
+      <center><h4 class="card-title">BED1</h4></center>
+      <center><h4 class="card-title">$40</h4></center>
+     <a href="{% url 'end' %}"><input type="submit" value="buynow"></a>
+    </div>
+    </div>
+        </div>
+         <div class="col-sm-3">
+<div class="card" style="width:250px">
+    <img class="card-img-top" src="{% static 'bed2.jpg' %}" alt="Card image" style="width:100%;height:180px;">
+
+    <div class="card-body">
+      <center><h4 class="card-title">BED2</h4></center>
+     <center><h4 class="card-title">$30</h4></center>
+     <a href="{% url 'end' %}"><input type="submit" value="buynow"></a>
+    </div>
+    </div>
+        </div>
+         <div class="col-sm-3">
+               <div class="card" style="width:250px">
+    <img class="card-img-top" src="{% static 'bed3.jpg' %}" alt="Card image" style="width:100%;height:180px;">
+    <div class="card-body">
+      <center><h4 class="card-title">BED3</h4></center>
+      <center><h4 class="card-title">$100</h4></center>
+     <a href="{% url 'end' %}"><input type="submit" value="buynow"></a>
+    </div>
+    </div>
+
+        </div>
+         <div class="col-sm-3">
+           <div class="card" style="width:250px">
+    <img class="card-img-top" src="{% static 'bed4.jpg' %}" alt="Card image" style="width:100%;height:180px;">
+    <div class="card-body">
+      <center><h4 class="card-title">BED4</h4></center>
+      <center><h4 class="card-title">$120</h4></center>
+     <a href="{% url 'end' %}"><input type="submit" value="buynow"></a>
+    </div>
+    </div>
+        </div>
+</div>
+   <center><div class="box1">
+<p style="margin-top:70px;font-size:50px;font-style: italic;color:black">THE BEST BED ONE<br>CAN SLEEP ON IS PEACE</p>
+   </div></center>
+
+</div>
+<center>
+    <a href="{% url 'categories' %}"><input type="button" value="categories"></a></center>
+</center>
+</body>
+</html>

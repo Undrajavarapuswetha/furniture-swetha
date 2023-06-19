@@ -1,0 +1,20 @@
+<html>
+{% load static %}
+<head>
+      <title>Furniture</title>
+    <style>
+        .main{
+            background-image: url("{% static 'image24.jpg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+        </style>
+</head>
+<body class="main">
+<center><h1>welcome to furniture store</h1></center>
+<a href="{% url 'addproduct' %}"><input type="button" value="addproduct"><br><br></a>
+<a href="{% url 'viewproduct' %}" ><input type="button" value="viewproduct"></a>
+<a href="{% url 'alastview' %}" ><input type="button" value="lastview"></a>
+<a href="{% url 'alogout' %}" ><input type="button" value="logout"></a>
+</body>
+</html>

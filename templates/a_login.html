@@ -1,0 +1,39 @@
+<html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>LOGIN PAGE</title>
+   <style>
+       .main{
+            background-image: url("{% static 'image-6.jpg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+   </style>
+</head>
+<body class="main">
+<center><h1>Admin login form</h1></center>
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-3">
+              <div class="col-sm-6">
+                  <form method="post">
+                      {% csrf_token %}
+                       <div class="form-group">
+                           Admin Email:
+                           <input type="email" name="email" class="form-control"></div><br>
+                        <div class="form-group">
+                            Admin password:
+                            <input type="password" name="password" class="form-control"></div><br>
+                      <div class="form-group">
+              <input type="submit" value="SUBMIT" class="btn btn-success"><br><br>
+              <input type="reset" value="RESET" class="btn btn-danger">
+                      </div>
+               </form>
+        </div>
+    </div>
+  </div>
+ </div>
+
+</body>
+</html>

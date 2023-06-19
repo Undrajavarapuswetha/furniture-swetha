@@ -1,0 +1,45 @@
+<html>
+{% load static %}
+<head>
+    <style>
+        .main{
+            background-image: url("{% static 'img6.jpg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>ADD PRODUCTS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body class="main">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <form method="post" enctype="multipart/form-data">
+
+                {% csrf_token %}
+                <div class="form-group">PRODUCT NAME:<input type="text" name="pname" class="form-control"></div>
+                <div class="form-group">PRODUCT CATEGORY<input type="text" name="pcat" class="form-control"></div>
+                <div class="form-group">PRODUCT COST<input type="text" name="pcost" class="form-control"></div>
+                <div class="form-group">PRODUCT QUALITY<input type="text" name="pquality" class="form-control"></div>
+                <div class="form-group">PRODUCT DEC<input type="text" name="pdec" class="form-control"></div>
+                <div class="form-group">PRODUCT IMAGE<input type="file" name="pimage" class="form-control"></div>
+                <input type="submit" value="AddProduct">
+            </form>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+    </div>
+</div>
+</body>
+<html>

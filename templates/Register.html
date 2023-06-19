@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        .main{
+            background-image: url("{% static 'image-6.jpg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+
+</head>
+<body class="main">
+<center><h1>WELCOME TO USER REGISTER</h1></center>
+<div class="container">
+    <div class="row">
+            <div class="col-sm-3">
+                <div class="col-sm-6"></div>
+                <form method="post">
+                    {% csrf_token %}
+                        <div class="form-group">customername:<input type="text" name="cname" class="form-control"></div>
+                        <div class="form-group">customeremail:<input type="email" name="cemail" class="form-control"></div>
+                        <div class="form-group">password:<input type="password" name="paw" class="form-control"></div>
+                        <div class="form-group">mobileno:<input type="number" name="mno" class="form-control"></div>
+                        <div class="form-group">address:<input type="text" name="addr" class="form-control"></div>
+                        <div class="form-group">pincode:<input type="number" name="pincode" class="form-control"></div><br>
+                      <input type="submit" value="REGISTER" class="btn btn-success">
+                </form>
+            </div>
+    </div>
+</div>
+</body>
+</html>
